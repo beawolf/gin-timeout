@@ -3,7 +3,7 @@ package timeout
 import (
 	"context"
 	"github.com/gin-gonic/gin"
-	"github.com/vearne/gin-timeout/buffpool"
+	"github.com/beawolf/gin-timeout/buffpool"
 	"net/http"
 	"time"
 )

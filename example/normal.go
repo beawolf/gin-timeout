@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/vearne/gin-timeout"
+	"github.com/beawolf/gin-timeout"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -80,7 +80,7 @@ func long2(c *gin.Context) {
 
 func long3(c *gin.Context) {
 	// request a slow service
-	// see  https://github.com/vearne/gin-timeout/blob/master/example/slow_service.go
+	// see  https://github.com/beawolf/gin-timeout/blob/master/example/slow_service.go
 	url := "http://localhost:8882/hello"
 	// Notice:
 	// Please use c.Request.Context(), the handler will be canceled where timeout event happen.

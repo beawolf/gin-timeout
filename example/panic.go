@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	timeout "github.com/vearne/gin-timeout"
+	timeout "github.com/beawolf/gin-timeout"
 	"log"
 	"net/http"
 	"time"

@@ -1,10 +1,10 @@
 # gin-timeout
-[![golang-ci](https://github.com/vearne/gin-timeout/actions/workflows/golang-ci.yml/badge.svg)](https://github.com/vearne/gin-timeout/actions/workflows/golang-ci.yml)
+[![golang-ci](https://github.com/beawolf/gin-timeout/actions/workflows/golang-ci.yml/badge.svg)](https://github.com/beawolf/gin-timeout/actions/workflows/golang-ci.yml)
 
 针对gin的超时中间件
 
 
-* [English README](https://github.com/vearne/gin-timeout/blob/master/README.md)
+* [English README](https://github.com/beawolf/gin-timeout/blob/master/README.md)
 
 ### 感谢
 本库的实现受到了标准库
@@ -13,21 +13,21 @@
 ### 安装&使用
 ```
 export GO111MODULE=on
-go get github.com/vearne/gin-timeout
+go get github.com/beawolf/gin-timeout
 ```
 
 ### 注意:
 如果handler支持取消操作，那么需要传入context.Context为c.Request.Context()
 
 ### 示例
-[更多示例](https://github.com/vearne/gin-timeout/tree/master/example)
+[更多示例](https://github.com/beawolf/gin-timeout/tree/master/example)
 ```package main
 
 import (
 	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/vearne/gin-timeout"
+	"github.com/beawolf/gin-timeout"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -89,7 +89,7 @@ func long2(c *gin.Context) {
 
 func long3(c *gin.Context) {
 	// request a slow service
-	// see  https://github.com/vearne/gin-timeout/blob/master/example/slow_service.go
+	// see  https://github.com/beawolf/gin-timeout/blob/master/example/slow_service.go
 	url := "http://localhost:8882/hello"
 	// 注意:
 	// 请使用 c.Request.Context(), 当超时发生时，handler将会被取消.
